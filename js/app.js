@@ -13,7 +13,11 @@ let clickPowerMultiple = document.getElementById('click-power-multiple');
 
 let refreshCookieCount = () => {
   cookieCounter.innerHTML = cookieCount;
-}
+};
+
+let refreshPowerClick = () => {
+  clickPowerLevel.innterHTML = clickPowerLevelNumber;
+};
 
 cookieClicker.addEventListener('click', () => {
     cookieCount += clickPower;
@@ -24,8 +28,11 @@ buyClickPower.addEventListener("click", () => {
     if (cookieCount >= clickPowerPriceAmount) {
         //subtract cookies from the price of the item
         cookieCount -= clickPowerPriceAmount;
-        //update cookie counter.
-        refreshCookieCount();
+        refreshCookieCount()
+        //Upgrade power level
+        clickPowerLevelNumber += 1;
+        //refresh shop item
+        refreshPowerClick();
     } else {
         console.log("You don't have enough cookies!");
     };
