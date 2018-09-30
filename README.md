@@ -1,4 +1,4 @@
-#Cookie Clicker FEW 1-1
+# Cookie Clicker FEW 1-1
 
 ## Methodologies Strategies Used:
 - Agile Software Development
