@@ -17,6 +17,7 @@ let refreshCookieCount = () => {
 
 let refreshPowerClick = () => {
   clickPowerLevel.innterHTML = clickPowerLevelNumber;
+  clickPowerPrice.innerHTML = clickPowerPriceAmount;
 };
 
 cookieClicker.addEventListener('click', () => {
@@ -31,6 +32,8 @@ buyClickPower.addEventListener("click", () => {
         refreshCookieCount()
         //Upgrade power level
         clickPowerLevelNumber += 1;
+        //Update click price
+        clickPowerPriceAmount = Math.floor(clickPowerPriceAmount * 1.33);
         //refresh shop item
         refreshPowerClick();
     } else {
